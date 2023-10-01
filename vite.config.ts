@@ -5,9 +5,9 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 export default defineConfig({
   plugins: [sveltekit(), basicSsl()],
   test: {
-    include: ['src/**/*.{test,spec}.{js,ts}']
+    include: ['src/**/*.{test,spec}.{js,ts}'],
   },
   optimizeDeps: {
-    include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
-  }
+    include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep'],
+  },
 });

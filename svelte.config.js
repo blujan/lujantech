@@ -20,9 +20,9 @@ const config = {
       // fallback: 'index.html',
       fallback: 'error.html',
       precompress: false,
-      strict: true
-    })
-  }
+      strict: true,
+    }),
+  },
 };
 
 export default config;

@@ -82,7 +82,7 @@
       },
       () => {
         console.log('copy failed');
-      }
+      },
     );
   }
 
@@ -94,7 +94,7 @@
     photography: 'row-span-2 md:row-span-1',
     art: '',
     'vintage audio electronics': 'col-span-2',
-    gardening: ''
+    gardening: '',
   };
   const interestArray = Array.from(Object.keys(interests));
 
@@ -125,41 +125,41 @@
 </svelte:head>
 
 <article id="main" class="transition duration-500">
-  <div class="grid grid-rows-1 grid-cols-2 md:grid-cols-3 fixed top-0 w-screen z-20 mr-4">
+  <div class="fixed top-0 z-20 mr-4 grid w-screen grid-cols-2 grid-rows-1 md:grid-cols-3">
     <div class="" />
     <div
-      class="bg-primary px-5 min-h-fit py-2 bg-opacity-90 shadow-md backdrop-blur-sm rounded-b-md name-header mr-5 min-w-full md:min-w-fit md:max-w-lg col-span-2"
+      class="name-header col-span-2 mr-5 min-h-fit min-w-full rounded-b-md bg-primary bg-opacity-90 px-5 py-2 shadow-md backdrop-blur-sm md:min-w-fit md:max-w-lg"
     >
-      <div class="flex flex-auto flex-row items-center w-full place-content-between">
+      <div class="flex w-full flex-auto flex-row place-content-between items-center">
         <div
-          class="text-2xl text-text_heading align-middle font-['MPLUS1p-ExBold'] tracking-tight whitespace-nowrap md:mr-10"
+          class="whitespace-nowrap align-middle font-['MPLUS1p-ExBold'] text-2xl tracking-tight text-text_heading md:mr-10"
         >
           <h1>Brennan Lujan</h1>
         </div>
-        <div class=" grid grid-flow-col grow justify-end gap-7">
-          <div class="place-content-center grid text-center">
+        <div class=" grid grow grid-flow-col justify-end gap-7">
+          <div class="grid place-content-center text-center">
             <button class="group cursor-pointer" on:click={() => EmailModal.open()}>
               <Icon
                 name="email"
-                class="h-6 w-6 fill-accent transition group-hover:invert duration-300 drop-shadow-sm"
+                class="h-6 w-6 fill-accent drop-shadow-sm transition duration-300 group-hover:invert"
               />
             </button>
           </div>
-          <div class="place-content-center grid text-center">
+          <div class="grid place-content-center text-center">
             <a class="group" href="https://www.linkedin.com/in/bl-ce-eng">
               <Icon
                 name="linkedin"
                 aria-label="Follow on LinkedIn"
-                class="h-6 w-6 fill-accent transition group-hover:invert duration-300 drop-shadow-sm"
+                class="h-6 w-6 fill-accent drop-shadow-sm transition duration-300 group-hover:invert"
               />
             </a>
           </div>
-          <div class="place-content-center grid text-center">
+          <div class="grid place-content-center text-center">
             <a class="group" href="https://github.com/blujan">
               <Icon
                 name="github"
                 aria-label="Follow on GitHub"
-                class="h-6 w-6 fill-accent transition group-hover:invert duration-300 drop-shadow-sm"
+                class="h-6 w-6 fill-accent drop-shadow-sm transition duration-300 group-hover:invert"
               />
             </a>
           </div>
@@ -170,7 +170,7 @@
 
   <div
     id="background-shade"
-    class="transition duration-1000 fixed left-[12%] md:left-[42%] bottom-0 w-[300px] min-h-full z-[4] bg-secondary bg-opacity-25"
+    class="fixed bottom-0 left-[12%] z-[4] min-h-full w-[300px] bg-secondary bg-opacity-25 transition duration-1000 md:left-[42%]"
   />
   <video
     autoplay
@@ -178,7 +178,7 @@
     loop
     playsinline
     disablepictureinpicture
-    class="fixed left-[12%] md:left-[42%] bottom-0 min-w-[300px] min-h-full z-[3] object-cover"
+    class="fixed bottom-0 left-[12%] z-[3] min-h-full min-w-[300px] object-cover md:left-[42%]"
     aria-hidden="true"
   >
     <source src="/backgrounds/bg_waves.webm" type="video/webm" />
@@ -186,35 +186,35 @@
   </video>
   <Scroller top={0} bottom={1} bind:index bind:offset bind:progress>
     <div slot="background" />
-    <div slot="foreground" class="bg-background bg-cover bg-[url('/backgrounds/layered-waves-haikei.svg')]">
-      <div class="grid grid-rows-1 grid-cols-2 md:grid-cols-3 mr-4">
+    <div slot="foreground" class="bg-background bg-[url('/backgrounds/layered-waves-haikei.svg')] bg-cover">
+      <div class="mr-4 grid grid-cols-2 grid-rows-1 md:grid-cols-3">
         <div class="" />
-        <div class="grid grid-cols-1 gap-52 col-span-2 after:shrink-0 after:h-[20vh] md:after:h-[40vh]">
+        <div class="col-span-2 grid grid-cols-1 gap-52 after:h-[20vh] after:shrink-0 md:after:h-[40vh]">
           <Card transparent={false} id={'section-0'} next={'section-1'}>
-            <div class="flex place-content-center -mt-4 -mx-4 z-30">
+            <div class="z-30 -mx-4 -mt-4 flex place-content-center">
               <img src="images/portrait.jpg" alt="portrait" class="h-[20rem] w-full object-cover" />
             </div>
-            <p class="text-left mt-6 mb-6">
+            <p class="mb-6 mt-6 text-left">
               <span class="text-lg tracking-tight text-text_heading">Senior Firmware Engineer</span><br />
               Over 20 years of technical experience
             </p>
-            <hr class="bg-accent border-0 h-px" />
-            <p class="text-base my-4 text-text_heading tracking-tight">Interests Also Include</p>
+            <hr class="h-px border-0 bg-accent" />
+            <p class="my-4 text-base tracking-tight text-text_heading">Interests Also Include</p>
             <div
-              class="grid grid-cols-2 md:grid-cols-3 text-sm mb-6 gap-4 grid-flow-dense leading-6 tracking-wider text-center"
+              class="mb-6 grid grid-flow-dense grid-cols-2 gap-4 text-center text-sm leading-6 tracking-wider md:grid-cols-3"
             >
               {#each Object.entries(interests) as item}
                 <div
                   id="interest-{item[0]}"
-                  class="place-content-center grid py-2 bg-secondary bg-opacity-90 rounded-3xl hover:bg-accent transition duration-1000 {item[1]}"
+                  class="grid place-content-center rounded-3xl bg-secondary bg-opacity-90 py-2 transition duration-1000 hover:bg-accent {item[1]}"
                 >
                   {item[0]}
                 </div>
               {/each}
             </div>
-            <hr class="bg-accent border-0 h-px" />
-            <p class="text-base my-4 text-text_heading tracking-tight">Alma Mater</p>
-            <div class="ml-4 mb-8">
+            <hr class="h-px border-0 bg-accent" />
+            <p class="my-4 text-base tracking-tight text-text_heading">Alma Mater</p>
+            <div class="mb-8 ml-4">
               <p class="mb-4">
                 <span class="tracking-tight">UC Santa Cruz</span><br />
                 <span class="text-sm">Bachelor of Science, Computer Engineering</span>
@@ -227,7 +227,7 @@
           </Card>
 
           <Card title={'program.'} id={'section-1'} next={'section-2'}>
-            <p class="text-sm text-justify mb-8 leading-relaxed">
+            <p class="mb-8 text-justify text-sm leading-relaxed">
               I have been asked how many programming languages I've learned over the years and struggle to answer. In my
               teens, I taught myself enough to start building small Windows apps using Visual Basic (the original, not
               .NET) then moving on to HTML and building websites (why yes, I did fully hand-code my Geocities page).
@@ -242,7 +242,7 @@
                 name="github"
                 slot="icon"
                 aria-label="My Github Profile"
-                class="h-10 w-10 fill-accent group-hover:invert duration-300 transition stoke-none drop-shadow-md"
+                class="stoke-none h-10 w-10 fill-accent drop-shadow-md transition duration-300 group-hover:invert"
               />
               GitHub Profile
               <svelte:fragment slot="tooltip">DRY does not apply to this button</svelte:fragment>
@@ -253,7 +253,7 @@
                 name="leetcode"
                 slot="icon"
                 aria-label="My Leetcode Profile"
-                class="h-10 w-10 fill-accent group-hover:invert duration-300 transition stoke-none drop-shadow-md"
+                class="stoke-none h-10 w-10 fill-accent drop-shadow-md transition duration-300 group-hover:invert"
               />
               Leetcode Profile
               <svelte:fragment slot="tooltip">Because why not</svelte:fragment>
@@ -261,8 +261,8 @@
           </Card>
 
           <Card title={'words.'} id={'section-2'} next={'section-3'}>
-            <blockquote class="border-l-gray-400 border-opacity-40 border-l-[1px] pl-4 mb-8">
-              <p class="text-sm italic text-left leading-relaxed">
+            <blockquote class="mb-8 border-l-[1px] border-l-gray-400 border-opacity-40 pl-4">
+              <p class="text-left text-sm italic leading-relaxed">
                 "A word could be silent. A word could make a noise, like a ghost. There it is. There it isn't. It's
                 true! It's the truth! It's all made up, it's a lie. You believe it, you don't believe it- It exists, it
                 does not exist. To write the perfect sentence, you need to understand how these noisy, speechless ghosts
@@ -282,7 +282,7 @@
               <Icon
                 name="write_freely"
                 slot="icon"
-                class="h-10 w-10 fill-accent group-hover:invert duration-300 transition stoke-none align-middle drop-shadow-md"
+                class="stoke-none h-10 w-10 fill-accent align-middle drop-shadow-md transition duration-300 group-hover:invert"
               />
               WriteFreely Blog
             </Button>
@@ -290,7 +290,7 @@
 
           <Card title={'images.'} id={'section-3'} next={'section-4'}>
             {#if browser}
-              <div id="section-3" class="mb-6 shadow-md rounded-lg pr-0">
+              <div id="section-3" class="mb-6 rounded-lg pr-0 shadow-md">
                 {#await loadPhotos() then photos}
                   <Carousel
                     autoplay
@@ -311,7 +311,7 @@
                 {/await}
               </div>
             {/if}
-            <p class="text-sm mb-8 text-justify leading-relaxed">
+            <p class="mb-8 text-justify text-sm leading-relaxed">
               I've had a camera in my hand since I was kid, and I somehow still have the pictures to prove it. It
               started more as a travel log - the simple capturing of a place. That morphed into figuring out how to
               capture the feeling of a place, and then how to tell the story of that feeling, and then maybe the story
@@ -321,7 +321,7 @@
               <Icon
                 name="flickr"
                 slot="icon"
-                class="h-10 w-10 transition duration-300 fill-accent group-hover:invert drop-shadow-md"
+                class="h-10 w-10 fill-accent drop-shadow-md transition duration-300 group-hover:invert"
                 aria-hidden="true"
               />
               Photos (current &mdash; 2023)
@@ -331,7 +331,7 @@
               <Icon
                 name="flickr"
                 slot="icon"
-                class="h-10 w-10 transition duration-300 fill-accent group-hover:invert drop-shadow-md"
+                class="h-10 w-10 fill-accent drop-shadow-md transition duration-300 group-hover:invert"
                 aria-hidden="true"
               />
               Photo Archive (2020 &mdash; 2011)
@@ -339,16 +339,16 @@
           </Card>
 
           <Card title={'previous works.'} id={'section-4'}>
-            <p class="text-sm text-justify mb-8 leading-relaxed">
+            <p class="mb-8 text-justify text-sm leading-relaxed">
               Most of my work isn't public facing, let alone my best work, but if it was public, I'll put it here.
             </p>
-            <button class="group cursor-pointer mb-8" on:click={() => SVModal.open()}>
+            <button class="group mb-8 cursor-pointer" on:click={() => SVModal.open()}>
               <span class="inline-flex items-center gap-4">
                 <Icon
                   name="grave_with_flowers"
-                  class="h-10 w-10 transition duration-300 fill-accent group-hover:invert drop-shadow-md"
+                  class="h-10 w-10 fill-accent drop-shadow-md transition duration-300 group-hover:invert"
                 />
-                <span class="text-sm align-middle slide-hover p-0.5 duration-300 group-hover:slide-hover-active">
+                <span class="slide-hover group-hover:slide-hover-active p-0.5 align-middle text-sm duration-300">
                   Smith &amp; Vandiver Website, 2006
                 </span>
               </span>
@@ -364,9 +364,9 @@
       <img
         src="/images/SVPage.png"
         alt="Capture of Smith & Vandiver website"
-        class="shadow-lg mb-6 mt-6 object-none w-full h-60 place-content-center object-left-top"
+        class="mb-6 mt-6 h-60 w-full place-content-center object-none object-left-top shadow-lg"
       />
-      <p class="mb-2 text-sm text-justify leading-relaxed px-6">
+      <p class="mb-2 px-6 text-justify text-sm leading-relaxed">
         The year was 2005, and while Wordpress had already existed for a few years, it had yet to reach a level of
         maturity to make e-commerce websites both easy and inexpensive that would soon make it ubiquitous. As such, if
         you wanted a website, you either paid a developer to custom build it or paid for an expensive and often
@@ -377,7 +377,7 @@
         built an entire backend page to edit just about every property on the website so that it could then be
         maintained by the art department and office staff.
       </p>
-      <p class="mb-2 text-sm text-justify leading-relaxed px-6">
+      <p class="mb-2 px-6 text-justify text-sm leading-relaxed">
         The website was built from PHP5 to dynamically generate HTML along with a static CSS template while the backend
         was Apache and MySql. Javascript is completely absent from the website, but AJAX wasn't really a thing yet aside
         from a few things like Google Maps, which had just gone live that year. So, this was still the norm for the
@@ -385,7 +385,7 @@
         maintenance of the server (which was FreeBSD if memory serves) along with the firewall to properly DMZ the
         service.
       </p>
-      <p class="mb-2 text-sm text-justify leading-relaxed px-6">
+      <p class="mb-2 px-6 text-justify text-sm leading-relaxed">
         It went live in early 2006, and near as a I tell, was up until mid 2010, three years after I left the company.
         Though, I'm pretty sure my voice was up on the company's main IVR for longer.
       </p>
@@ -395,7 +395,7 @@
             name="arrow_pixel_right"
             slot="icon"
             aria-hidden="true"
-            class="h-8 w-8 transition duration-300 fill-accent group-hover:invert drop-shadow-md"
+            class="h-8 w-8 fill-accent drop-shadow-md transition duration-300 group-hover:invert"
           />
           Internet Archive Link
         </Button>
@@ -405,30 +405,30 @@
   </section>
   <section>
     <Modal bind:this={EmailModal} mini={true}>
-      <div class="flex flow-row mt-4 px-6 content-center gap-4">
+      <div class="flow-row mt-4 flex content-center gap-4 px-6">
         <div>
-          <Icon name="no_robot" class="h-16 w-16 md:h-32 md:w-32 stroke-accent drop-shadow-md opacity-90" />
+          <Icon name="no_robot" class="h-16 w-16 stroke-accent opacity-90 drop-shadow-md md:h-32 md:w-32" />
         </div>
-        <div class="flex justify-center items-center">
+        <div class="flex items-center justify-center">
           <div>
-            <p class="text-lg md:text-xl font-['MPLUS1p-ExBold'] mb-2 tracking-tight text-text_heading">
+            <p class="mb-2 font-['MPLUS1p-ExBold'] text-lg tracking-tight text-text_heading md:text-xl">
               Well hang on there
             </p>
             <p class="text-sm leading-relaxed">
               I have to deal with machines enough in my day to day life, and I'm not sure I need to be talking to more
               of them. So I need to ask you something a machine couldn't possibly know.
             </p>
-            <span class="text-center text-sm leading-relaxed italic">What's two to the seventh power?</span>
+            <span class="text-center text-sm italic leading-relaxed">What's two to the seventh power?</span>
           </div>
         </div>
       </div>
-      <div class="grid gap-4 mt-4 px-6 w-full mb-6">
+      <div class="mb-6 mt-4 grid w-full gap-4 px-6">
         <div class="text-right">
           <form class="group relative">
             <Icon
               name="equals_sign"
               aria-hidden="true"
-              class="h-5 w-5 absolute left-3 top-1/2 -mt-2.5 pointer-events-none group-focus-within:text-gray-400 stroke-none fill-neutral-500"
+              class="pointer-events-none absolute left-3 top-1/2 -mt-2.5 h-5 w-5 fill-neutral-500 stroke-none group-focus-within:text-gray-400"
             />
             <input
               type="text"
@@ -436,18 +436,18 @@
               maxlength="8"
               size="10"
               placeholder="answer"
-              class="rounded-md border-2 focus:ring-1 focus:ring-accent focus:outline-none leading-6 placeholder-gray-600 shadow-sm w-full pl-10 text-neutral-900"
+              class="w-full rounded-md border-2 pl-10 leading-6 text-neutral-900 placeholder-gray-600 shadow-sm focus:outline-none focus:ring-1 focus:ring-accent"
               bind:value={answer}
             />
           </form>
         </div>
-        <div class="w-full border-2 shadow-sm rounded-md bg-neutral-100 px-2">
-          <span class="inline-flex items-center gap-4 w-full mt-1">
+        <div class="w-full rounded-md border-2 bg-neutral-100 px-2 shadow-sm">
+          <span class="mt-1 inline-flex w-full items-center gap-4">
             <Icon name={answerIcon} class="h-6 w-6 {valid ? 'fill-green-500' : 'fill-red-500'}" />
-            <span class="grow text-right slide-hover hover:slide-hover-active duration-300 p-0.5 text-black">
-              <a href="mailto:{result}" class="tracking-wide overflow-clip">{result}</a>
+            <span class="slide-hover hover:slide-hover-active grow p-0.5 text-right text-black duration-300">
+              <a href="mailto:{result}" class="overflow-clip tracking-wide">{result}</a>
             </span>
-            <button class="flex-none fill-accent active:invert opacity-75" on:click={() => copyToClipboard()}>
+            <button class="flex-none fill-accent opacity-75 active:invert" on:click={() => copyToClipboard()}>
               <Icon name="clipboard" class="h-6 w-6" />
             </button>
           </span>

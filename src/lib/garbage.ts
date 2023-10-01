@@ -206,7 +206,7 @@ const characters = [
   '🍂',
   '🍃',
   '🪹',
-  '🪺'
+  '🪺',
 ];
 
 export function genGarbage() {

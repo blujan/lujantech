@@ -62,7 +62,7 @@
       <button
         bind:this={cancelButton}
         type="button"
-        class="text-text_body border-2 border-accent border-opacity-40 bg-gray-700 rounded-md py-2 px-4 my-2 text-sm outline outline-0 outline-accent ring-accent hover:ring-2 hover:text-text_heading transition-all duration-300 shadow-md"
+        class="my-2 rounded-md border-2 border-accent border-opacity-40 bg-gray-700 px-4 py-2 text-sm text-text_body shadow-md outline outline-0 outline-accent ring-accent transition-all duration-300 hover:text-text_heading hover:ring-2"
         on:click={close}>Close</button
       >
     </div>
@@ -74,32 +74,32 @@
     overflow: hidden;
   }
   dialog {
-    @apply inset-0 shadow-lg backdrop-blur-md overflow-hidden rounded-md max-w-screen-sm content-between flex flex-col fixed bg-opacity-50 bg-gray-600;
-    @apply text-black mt-auto mb-auto;
-    @apply border-t-[1px] border-t-white border-l-[1px] border-l-white border-opacity-10 border-b-gray-800 border-r-gray-800 border-b-[1px] border-r-[1px];
+    @apply fixed inset-0 flex max-w-screen-sm flex-col content-between overflow-hidden rounded-md bg-gray-600 bg-opacity-50 shadow-lg backdrop-blur-md;
+    @apply mb-auto mt-auto text-black;
+    @apply border-b-[1px] border-l-[1px] border-r-[1px] border-t-[1px] border-b-gray-800 border-l-white border-r-gray-800 border-t-white border-opacity-10;
     @apply transition duration-500;
 
     & > header {
-      @apply flex justify-between px-3 py-2 grow-0 items-center;
+      @apply flex grow-0 items-center justify-between px-3 py-2;
       & > h2 {
-        @apply text-2xl font-[MPLUS1p-ExBold] text-text_heading tracking-tight;
+        @apply font-[MPLUS1p-ExBold] text-2xl tracking-tight text-text_heading;
       }
       & > button {
-        @apply border hover:ring-2 ring-accent rounded-full aspect-square place-items-center stroke-white stroke-[3] bg-black bg-opacity-20 shadow-sm p-0 shrink-0 px-[0.25] border-gray-600 transition-all duration-300;
+        @apply aspect-square shrink-0 place-items-center rounded-full border border-gray-600 bg-black bg-opacity-20 stroke-white stroke-[3] p-0 px-[0.25] shadow-sm ring-accent transition-all duration-300 hover:ring-2;
       }
     }
     & > div {
-      @apply overflow-y-auto overscroll-y-contain bg-gray-900 opacity-70 z-10 shadow-modal border-t-[1px] border-t-white border-opacity-20 text-gray-200;
+      @apply z-10 overflow-y-auto overscroll-y-contain border-t-[1px] border-t-white border-opacity-20 bg-gray-900 text-gray-200 opacity-70 shadow-modal;
       &::-webkit-scrollbar {
         @apply bg-gray-900;
       }
     }
     & > footer {
-      @apply flex flex-row justify-end px-4 pt-1 grow-0 text-text_heading gap-6;
+      @apply flex grow-0 flex-row justify-end gap-6 px-4 pt-1 text-text_heading;
     }
   }
   dialog::backdrop {
-    @apply opacity-0 transition duration-200 inset-0 bg-background bg-cover bg-[url('/backgrounds/stacked-waves-haikei-modal.svg')];
+    @apply inset-0 bg-background bg-[url('/backgrounds/stacked-waves-haikei-modal.svg')] bg-cover opacity-0 transition duration-200;
   }
   dialog:not([open]) {
     pointer-events: none;

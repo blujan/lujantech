@@ -5,17 +5,17 @@
 <section>
   {#if transparent}
     <div
-      class="max-w-md ml-5 bg-primary p-0 rounded-md text-neutral-200 transition duration-700 shadow-lg shadow-gray-600/50"
+      class="ml-5 max-w-md rounded-md bg-primary p-0 text-neutral-200 shadow-lg shadow-gray-600/50 transition duration-700"
     >
       <div
-        class="max-w-md bg-primary p-4 rounded-md bg-opacity-50 z-10 backdrop-blur-md relative transition duration-700 text-text_body selection:bg-accent selection:text-accent_text border-t-[1px] border-t-white border-l-[1px] border-l-white border-opacity-10 border-b-gray-800 border-r-gray-800 border-b-[1px] border-r-[1px]"
+        class="relative z-10 max-w-md rounded-md border-b-[1px] border-l-[1px] border-r-[1px] border-t-[1px] border-b-gray-800 border-l-white border-r-gray-800 border-t-white border-opacity-10 bg-primary bg-opacity-50 p-4 text-text_body backdrop-blur-md transition duration-700 selection:bg-accent selection:text-accent_text"
       >
         <slot />
       </div>
     </div>
   {:else}
     <div
-      class="max-w-md shadow-md ml-5 bg-primary rounded-md z-10 p-4 relative transition duration-700 text-text_body selection:bg-accent selection:text-accent_text border-t-[1px] border-t-white border-l-[1px] border-l-white border-opacity-10 border-b-gray-800 border-r-gray-800 border-b-[1px] border-r-[1px] overflow-hidden mt-48 md:mt-80"
+      class="relative z-10 ml-5 mt-48 max-w-md overflow-hidden rounded-md border-b-[1px] border-l-[1px] border-r-[1px] border-t-[1px] border-b-gray-800 border-l-white border-r-gray-800 border-t-white border-opacity-10 bg-primary p-4 text-text_body shadow-md transition duration-700 selection:bg-accent selection:text-accent_text md:mt-80"
     >
       <slot />
     </div>

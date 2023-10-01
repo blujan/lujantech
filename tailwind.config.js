@@ -11,15 +11,15 @@ export default {
         primary_shade: 'rgb(var(--color-primary-shade) / <alpha-value>)',
         secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
         accent: 'rgb(var(--color-accent) / <alpha-value>)',
-        accent_text: 'rgb(var(--color-accent-text) / <alpha-value>)'
+        accent_text: 'rgb(var(--color-accent-text) / <alpha-value>)',
       },
       boxShadow: {
-        modal: '0 2px 6px -1px rgb(0 0 0 / 0.5), 0 2px 5px -2px rgb(0 0 0 / 0.1)'
-      }
+        modal: '0 2px 6px -1px rgb(0 0 0 / 0.5), 0 2px 5px -2px rgb(0 0 0 / 0.1)',
+      },
     },
     fontFamily: {
-      sans: ['MPLUS1p']
-    }
+      sans: ['MPLUS1p'],
+    },
   },
-  plugins: []
+  plugins: [],
 };
