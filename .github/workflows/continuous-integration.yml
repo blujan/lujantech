@@ -17,12 +17,10 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      # Plugin support for the prettier action seems broken for prettify v2
-      - name: NPM Install
-        run: npm i
-
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
-          prettier_version: 2.8.0
-          prettier_options: --plugin-search-dir . ${{ vars.PRETTIER_OPTIONS }}
+          prettier_version: 3.0.3
+          prettier_plugins: "prettier-plugin-svelte@3.0.3 prettier-plugin-tailwindcss@0.5.4"
+          prettier_options: ${{ vars.PRETTIER_OPTIONS }} --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss
+
