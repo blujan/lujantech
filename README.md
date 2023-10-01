@@ -28,4 +28,3 @@ I tried to do my homework on this, as it were, but I also know that the field is
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT)
-
